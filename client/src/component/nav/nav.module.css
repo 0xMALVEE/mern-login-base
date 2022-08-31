@@ -1,0 +1,28 @@
+.navbar{
+    color:white;
+    background-color: #081621;
+    padding: 40px 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBrandName{
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+
+.navBrandName:hover{
+    color:white;
+}
+
+.navIcon{
+    font-size: 30px;
+    color:white;
+    transition: 0.1s all;
+}
+
+.navIcon:hover{
+    transition: 0.1s all;
+    color:red;
+}

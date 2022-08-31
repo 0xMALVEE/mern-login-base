@@ -1,0 +1,96 @@
+.loginMain {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wb{
+    font-weight: 600;
+}
+
+.loginLable{
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 1rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.input{
+    background-color: #e8f0fe;
+    padding:13px;
+    border-radius: .5rem;
+    border: none;
+    width: 100%;
+    color:black;
+    font-weight: 600;
+    margin:7px 14px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.input:focus-visible{
+    border:1px solid red;
+}
+
+.loginContainer{
+    width: 440px;
+    padding: 30px;
+    background-color: #f1f1f1;
+    border-radius: .5rem;
+}
+
+.rem{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.remfor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    color:black;
+    text-decoration: none;
+}
+
+.link:hover{
+    color:red;
+}
+
+.loginButton{
+    width: 100%;
+    border:none;
+    background-color: #797389;
+    color:white;
+    padding:13px;
+    border-radius: .5rem;
+    margin-top: 20px;
+}
+
+.loginButton:hover{
+    background-color: red;
+}
+
+.or{
+    display: block;
+    text-align: center;
+    margin:10px 0px;
+}
+
+.sup{
+    display: block;
+    text-align: center;
+    padding:13px;
+    border:1px solid red;
+    border-radius: .5rem;
+    color:black;
+    text-decoration: none;
+}
+
+.sup:hover{
+    background-color: red;
+    color:white;
+}

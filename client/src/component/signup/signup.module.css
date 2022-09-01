@@ -1,8 +1,10 @@
 .loginMain {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .wb{
@@ -95,6 +97,11 @@
     color:white;
 }
 
+.sgal span{
+    display: inline-block;
+    margin-right: 5px;
+}
+
 .googleBtn{
     width: 100%;
     border:none;
@@ -112,8 +119,4 @@
 .googleBtn i{
     display: inline-block;
     margin-right: 5px;
-}
-
-.googleLoginContainer{
-    margin-top: 10px;
 }

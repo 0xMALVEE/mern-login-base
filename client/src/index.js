@@ -2,14 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
+import {GoogleOAuthProvider} from '@react-oauth/google';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+
+import { reducers } from './reducers';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, {}, composeEnhancers(applyMiddleware(thunk)));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
+          <Provider store={store}>
         <BrowserRouter>
-            < App/>
+            <GoogleOAuthProvider
+                clientId='875353989409-6651kvqjfbglbfi7jkt7d6js90dng4ct.apps.googleusercontent.com'>
+                < App/>
+            </GoogleOAuthProvider>
         </BrowserRouter>
+        </Provider>
     </React.StrictMode>
 );
 

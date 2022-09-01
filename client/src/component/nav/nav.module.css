@@ -26,3 +26,14 @@
     transition: 0.1s all;
     color:red;
 }
+
+.username{
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logoutBtn{
+    font-size: 25px;
+}

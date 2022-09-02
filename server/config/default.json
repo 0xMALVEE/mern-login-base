@@ -1,3 +1,5 @@
 {
-    "JWT_SECRET":"thisis_thereal_shit55bitch"
+    "JWT_SECRET":"thisis_thereal_shit55bitch",
+    "NODEMAILER_EMAIL":"alveedev8141@gmail.com",
+    "NODEMAILER_PASSWORD":"juasvgkurnmnepdi"
 }

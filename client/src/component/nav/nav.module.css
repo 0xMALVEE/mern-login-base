@@ -17,13 +17,11 @@
 }
 
 .navIcon{
-    font-size: 30px;
+    font-size: 20px;
     color:white;
-    transition: 0.1s all;
 }
 
 .navIcon:hover{
-    transition: 0.1s all;
     color:red;
 }
 
@@ -36,4 +34,31 @@
 
 .logoutBtn{
     font-size: 25px;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer p{
+    margin-bottom: 0px;
+}
+
+.accountLS{
+    font-size:13px;
+    display: inline-block;
+    padding:0px 10px;
+}
+
+.linkNav{
+    text-decoration: none;
+    color: rgba(255,255,255,.5);
+}
+
+.linkNav:hover{
+    color:red;
+    text-decoration: underline;
+    /* color:red; */
 }

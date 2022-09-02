@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import NavStyles from "./nav.module.css"
 import {connect} from "react-redux"
-import {useEffect, useInsertionEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux"
 import {LOGOUT} from "../../constants/actionsTypes"
 function Nav(props) {
@@ -21,7 +21,7 @@ function Nav(props) {
         }
     }, [props.auth])
 
-    function handleLogOut(e){
+    function handleLogOut(e) {
         e.preventDefault()
 
         dispatch({type: LOGOUT})
@@ -34,26 +34,41 @@ function Nav(props) {
                 </Link>
             </div>
             <div>
-                <span className={`${NavStyles.username}`}>{authenticated
-                        ? `${user.firstName} ${user.lastName}`
-                        : null}</span>
 
                 {authenticated
-                    ? <Link onClick={handleLogOut}
-                            data-toggle="tooltip"
-                            title="Logout"
-                            data-placement="left"
-                            className={`${NavStyles.logoutBtn}`}
-                            to="/">
-                            <i class="fa-solid fa-right-from-bracket"></i>
+                    ? <div className={`${NavStyles.iconContainer}`}>
+                            <i
+                                data-toggle="tooltip"
+                                title="Account/Login"
+                                data-placement="top"
+                                className={` fa-solid fa-user`}></i>
+
+                            <div className={`${NavStyles.accountLS}`}>
+                                <p>Account</p>
+                                <Link className={`${NavStyles.linkNav}`} to="/account/login">Profile</Link>
+                                or
+                                <Link onClick={handleLogOut} className={`${NavStyles.linkNav}`} to="/">Logout</Link>
+                            </div>
+                        </div>
+
+                    : <div className={`${NavStyles.iconContainer}`}>
+
+                        <Link className={`${NavStyles.navIcon} `} to="/account/login">
+                            <i
+                                data-toggle="tooltip"
+                                title="Account/Login"
+                                data-placement="top"
+                                className={` fa-solid fa-user`}></i>
                         </Link>
-                    : <Link className={`${NavStyles.navIcon} `} to="/login">
-                        <i
-                            data-toggle="tooltip"
-                            title="Account/Login"
-                            data-placement="top"
-                            className={` fa-solid fa-user`}></i>
-                    </Link>}
+
+                        <div className={`${NavStyles.accountLS}`}>
+                            <p>Account</p>
+                            <Link className={`${NavStyles.linkNav}`} to="/account/login">Login</Link>
+                            or
+                            <Link className={`${NavStyles.linkNav}`} to="/account/signup">Signup</Link>
+                        </div>
+                    </div>
+}
 
             </div>
         </nav>

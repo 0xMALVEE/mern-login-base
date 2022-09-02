@@ -68,7 +68,7 @@ function Login(){
 
             
 
-                <Link className={`${LoginStyles.sup}`} to="/signup">Sign up</Link>
+                <Link className={`${LoginStyles.sup}`} to="/account/signup">Sign up</Link>
 
             </div>
         </div>

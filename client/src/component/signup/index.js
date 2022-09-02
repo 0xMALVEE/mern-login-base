@@ -108,7 +108,7 @@ function Signup() {
                 <div className={`${SignupStyles.remfor}`}>
                     <div className={`${SignupStyles.sgal}`}>
                         <span>Already signed up?</span>
-                        <Link className={`${SignupStyles.link}`} to={`/login`}>Login</Link>
+                        <Link className={`${SignupStyles.link}`} to={`/account/login`}>Login</Link>
                     </div>
                     <div>
                         <Link className={`${SignupStyles.link}`} to={`forgot-password`}>Forgot Password?</Link>

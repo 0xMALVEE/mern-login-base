@@ -46,7 +46,7 @@ function Nav(props) {
                             <div className={`${NavStyles.accountLS}`}>
                                 <p>Account</p>
                                 <Link className={`${NavStyles.linkNav}`} to="/account/login">Profile</Link>
-                                or
+                                <span className={NavStyles.or}>or</span>
                                 <Link onClick={handleLogOut} className={`${NavStyles.linkNav}`} to="/">Logout</Link>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ function Nav(props) {
                         <div className={`${NavStyles.accountLS}`}>
                             <p>Account</p>
                             <Link className={`${NavStyles.linkNav}`} to="/account/login">Login</Link>
-                            or
+                            <span className={NavStyles.or}>or</span>
                             <Link className={`${NavStyles.linkNav}`} to="/account/signup">Signup</Link>
                         </div>
                     </div>
